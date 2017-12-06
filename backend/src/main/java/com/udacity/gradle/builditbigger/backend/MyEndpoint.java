@@ -15,7 +15,7 @@ import javax.inject.Named;
 /** An endpoint class we are exposing */
 @Api(
         name = "myApi",
-        version = "v1",
+        version = "v2",
         namespace = @ApiNamespace(
                 ownerDomain = "backend.builditbigger.gradle.udacity.com",
                 ownerName = "backend.builditbigger.gradle.udacity.com",
