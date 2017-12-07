@@ -1,9 +1,7 @@
 package com.example.androidlib;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Pair;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class DisplayJokeActivity extends AppCompatActivity {
@@ -16,6 +14,7 @@ public class DisplayJokeActivity extends AppCompatActivity {
         String joke = "";
         if (getIntent() != null && getIntent().hasExtra("joke"))
             joke = getIntent().getExtras().getString("joke");
+
         TextView jokeTextView = findViewById(R.id.display_joke_text_view);
         jokeTextView.setText(joke);
     }

@@ -36,7 +36,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -45,7 +44,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.1.0'
     freeCompile 'com.google.android.gms:play-services-ads:11.6.2'
-    //compile 'com.google.android.gms:play-services-ads:11.6.2'
     compile project(path: ':javaLib')
     compile project(path: ':androidlib')
     compile project(path: ':backend', configuration: 'android-endpoints')

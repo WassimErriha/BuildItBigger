@@ -20,6 +20,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
-        android:text="tell main joke" />
+        android:text="@string/tell_paid_joke" />
 
 </RelativeLayout>
