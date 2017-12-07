@@ -32,15 +32,12 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
                     });
             // end options for devappserver
 
-
             myApiService = builder.build();
         }
-
         context = contexts[0];
 
         try {
             return myApiService.tellJoke().execute().getData();
-            //return myApiService.sayHi("wassim").execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -49,10 +46,10 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String joke) {
-
-        Intent intent = new Intent(context, DisplayJokeActivity.class);
-        intent.putExtra("joke", joke);
-        context.startActivity(intent);
-        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        if (joke != null){
+            Intent intent = new Intent(context, DisplayJokeActivity.class);
+            intent.putExtra("joke", joke);
+            context.startActivity(intent);
+        }
     }
 }
