@@ -34,9 +34,8 @@ public class MainActivityTest {
     @Test
     public void mainActivityTest() {
 
-
         ViewInteraction appCompatButton = onView(
-                allOf(withText("Tell Joke"),
+                allOf(withId(R.id.tell_joke_button),
                         childAtPosition(
                                 allOf(withId(R.id.fragment),
                                         childAtPosition(
@@ -45,7 +44,6 @@ public class MainActivityTest {
                                 1),
                         isDisplayed()));
         appCompatButton.perform(click());
-
 
         ViewInteraction textView = onView(
                 allOf(withId(R.id.display_joke_text_view),
